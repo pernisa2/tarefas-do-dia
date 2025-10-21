@@ -6,11 +6,11 @@
   <title>Minhas Tarefas por Dia</title>
   <style>
     :root{
-      --bg:#f4fbf4;--card:#ffffff;--ink:#1f2937;--muted:#6b7280;--primary:#07f6ae;--primary-ink:#fff;--ok:#16a34a;--warn:#ef4444;--ring:rgba(37,99,235,.25)
+      --bg:#f4f6fb;--card:#ffffff;--ink:#1f2937;--muted:#6b7280;--primary:#2563eb;--primary-ink:#fff;--ok:#16a34a;--warn:#ef4444;--ring:rgba(37,99,235,.25)
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial; color:var(--ink);background:linear-gradient(180deg,hsl(168, 98%, 49%), #01bc97 30%, #f4f6fb)}
+    body{margin:0;font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial; color:var(--ink);background:linear-gradient(180deg,#00ff6a, #00f44d 30%, #f4f6fb)}
     .wrap{max-width:920px;margin:40px auto;padding:0 16px}
     .card{background:var(--card);border-radius:18px;box-shadow:0 10px 30px rgba(30,41,59,.08);padding:28px}
     h1{margin:0 0 18px;font-size:clamp(26px, 4vw, 38px);text-align:center;letter-spacing:.3px}
@@ -30,10 +30,10 @@
     .btn-warn{background:var(--warn)}
     .btn-ok{background:var(--ok)}
 
-    .toolbar{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;margin:6px 0 16px}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;margin:6px 0 16px}.toolbar .spacer{flex:1}.file{display:none}
 
     ul{list-style:none;margin:0;padding:0}
-    li{display:grid;grid-template-columns: 36px 1fr auto; gap:10px; align-items:center; padding:10px 12px; border:1px solid #3202f1; background:#fff;border-radius:12px;margin-bottom:10px}
+    li{display:grid;grid-template-columns: 36px 1fr auto; gap:10px; align-items:center; padding:10px 12px; border:1px solid #eef0f4; background:#fff;border-radius:12px;margin-bottom:10px}
     .idx{color:var(--muted);text-align:center}
     .task{word-break:break-word}
     .task.done{text-decoration:line-through; color:#94a3b8}
@@ -70,6 +70,8 @@
       </div>
 
       <div class="toolbar">
+        <span class="spacer"></span>
+        <button id="downloadPngBtn" class="btn-ghost" title="Baixar uma imagem PNG do app">Baixar PNG</button>
         <button id="clearDoneBtn" class="btn-ghost">Excluir tarefas concluídas</button>
         <button id="clearAllBtn" class="btn-warn">Excluir todas as tarefas do dia</button>
       </div>
@@ -98,6 +100,7 @@
     const taskInput = document.getElementById('taskInput');
     const addBtn = document.getElementById('addBtn');
     const clearAllBtn = document.getElementById('clearAllBtn');
+    const downloadPngBtn = document.getElementById('downloadPngBtn');
     const clearDoneBtn = document.getElementById('clearDoneBtn');
     const listEl = document.getElementById('taskList');
     const countEl = document.getElementById('count');
@@ -232,10 +235,29 @@
     daySelect.addEventListener('change', render);
     clearAllBtn.addEventListener('click', clearAll);
     clearDoneBtn.addEventListener('click', clearDone);
+    downloadPngBtn.addEventListener('click', downloadPNG);
 
     // Inicializa
     render();
+
+    // ====== PNG snapshot ======
+    async function downloadPNG(){
+      const container = document.querySelector('.card');
+      // carrega html2canvas se ainda não estiver carregado
+      if(typeof html2canvas === 'undefined'){
+        const s = document.createElement('script');
+        s.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
+        await new Promise(res=>{ s.onload=res; document.head.appendChild(s); });
+      }
+      const canvas = await html2canvas(container, {backgroundColor:null, scale:2});
+      const a = document.createElement('a');
+      a.href = canvas.toDataURL('image/png');
+      const date = new Date().toISOString().replace(/[:T]/g,'-').slice(0,16);
+      a.download = `minhas-tarefas-${date}.png`;
+      a.click();
+    }
   </script>
 </body>
 </html>
+
 
