@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
 </p>
 
-> 🚀 **Gerencie sua rotina:** Um aplicativo web dinâmico e inteligente para organização de tarefas diárias com persistência de dados local e exportação de relatórios em imagem.
+> 🚀 **Gerencie sua rotina:** O aplicativo está publicado e pronto para rodar direto no navegador! [Clique aqui para acessar o app](https://pernisa2.github.io/tarefas-do-dia/)
 
 ---
 
@@ -33,11 +33,14 @@ O projeto foi construído em formato unificado em um arquivo principal, otimizan
 
 ## 🕹️ Como Executar o Projeto
 
-Para testar o aplicativo localmente:
+Para testar o aplicativo diretamente no navegador:
 
+1. Acesse o link oficial clicando [aqui](https://pernisa2.github.io/tarefas-do-dia/).
+2. O aplicativo abrirá imediatamente, pronto para uso!
+
+*Se preferir rodar localmente:*
 1. Faça o download ou clone este repositório.
 2. Dê um duplo clique no arquivo `index.html`.
-3. O app abrirá no seu navegador padrão pronto para guardar as suas tarefas!
 
 ## 🛠️ Tecnologias Utilizadas
 
