@@ -1,4 +1,4 @@
-# 📝 Minhas Tarefas por Dia
+# 📝 Minhas Tarefas Do Dia
 
 <p align="center">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
@@ -58,6 +58,6 @@ Para testar o aplicativo diretamente no navegador:
 ### 📐 Demonstração Visual
 
 <p align="center">
-* <img width="1269" height="872" alt="WhatsApp Image 2026-05-31 at 20 10 03" src="https://github.com/user-attachments/assets/4574f560-207d-4234-afd1-2c62b46dc068" />
+* <img width="1639" height="640" alt="Gemini_Generated_Image_nkiqfenkiqfenkiq" src="https://github.com/user-attachments/assets/ec4473c8-e018-4bbb-80b0-5686cdd17f1c" />
 </p>
 
