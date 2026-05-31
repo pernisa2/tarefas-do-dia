@@ -54,3 +54,10 @@ Para testar o aplicativo diretamente no navegador:
 ## 🧑‍💻 Desenvolvedor
 
 *   **GitHub:** [@pernisa2](https://github.com/pernisa2)
+
+### 📐 Demonstração Visual
+
+<p align="center">
+* <img width="1269" height="872" alt="WhatsApp Image 2026-05-31 at 20 10 03" src="https://github.com/user-attachments/assets/4574f560-207d-4234-afd1-2c62b46dc068" />
+</p>
+
