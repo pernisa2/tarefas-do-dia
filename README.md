@@ -12,7 +12,7 @@
 
 ## 📝 Sobre o Projeto
 
-O **Minhas Tarefas por Dia** é uma aplicação web completa (Single Page Application) que permite ao usuário gerenciar listas de tarefas específicas para cada dia da semana. O grande diferencial deste projeto é que os dados não somem ao atualizar a página, pois ele utiliza o armazenamento nativo do navegador para manter a rotina salva. 
+O **Minhas Tarefas do Dia** é uma aplicação web completa (Single Page Application) que permite ao usuário gerenciar listas de tarefas específicas para cada dia da semana. O grande diferencial deste projeto é que os dados não somem ao atualizar a página, pois ele utiliza o armazenamento nativo do navegador para manter a rotina salva. 
 
 Além disso, o app conta com uma ferramenta inteligente que renderiza a interface em um elemento canvas para permitir o download da lista em formato de imagem (PNG).
 
